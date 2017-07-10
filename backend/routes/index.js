@@ -10,8 +10,8 @@ var router = express.Router();
 
 router.post('/login', (req, res, next) => {
 
-    // req.checkBody('email', 'Email is required').notEmpty();
-    // req.checkBody('password', 'Password is required').notEmpty();
+    req.checkBody('email', 'Email is required').notEmpty();
+    req.checkBody('password', 'Password is required').notEmpty();
 
     var errors = req.validationErrors();
     if (errors) return res.status(400).json(errors);
@@ -26,21 +26,15 @@ router.post('/login', (req, res, next) => {
     res.json({token: token})
 });
 
-router.get('/friends', (req, res, next) => {
-    // req.checkBody('email', 'Email is required').notEmpty();
-    // req.checkBody('password', 'Password is required').notEmpty();
-
-    var errors = req.validationErrors();
-    if (errors) return res.status(400).json(errors);
-
-    var friends = _.find(friends, (friends) =>
-    user.email === "user@gmail.com" && user.password === "password");
-
-    if (!user) return res.status(404).json({message: "Entered login or password is incorrect"});
-
-    var token = jwt.sign({id: 1}, config.secretKey, {expiresIn: 7200000});
-
-    res.json({token: token})
+router.use('/*', (req, res, next) => {
+    try {
+        jwt.verify(req.headers.token, config.secretKey);
+        req.user = jwt.decode(req.headers.token);
+        next();
+    }
+    catch (e) {
+        res.status(401).json({message: "You are not permitted to do it"});
+    }
 });
 
 module.exports = router;

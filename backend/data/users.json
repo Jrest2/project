@@ -4,7 +4,8 @@
     "email": "user@gmail.com",
     "password": "password",
     "name": "Name_1",
-    "lastName": "LastName_1"
+    "lastName": "LastName_1",
+    "gender": "male"
   },
   {
     "id": 2,
