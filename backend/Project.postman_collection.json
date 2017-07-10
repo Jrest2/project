@@ -1,0 +1,76 @@
+{
+	"id": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
+	"name": "Project",
+	"description": "",
+	"order": [
+		"01e5329b-f018-332d-757a-e1e5d6b7e7dd",
+		"8a027683-b6f0-3e19-ec37-79300b70bdbd"
+	],
+	"folders": [],
+	"timestamp": 1499702510286,
+	"owner": "2250074",
+	"public": false,
+	"requests": [
+		{
+			"id": "01e5329b-f018-332d-757a-e1e5d6b7e7dd",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1499702518966,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n  \"email\":\"user@gmail.com\",\n  \"password\": \"password\"\n}"
+		},
+		{
+			"id": "8a027683-b6f0-3e19-ec37-79300b70bdbd",
+			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNDk5NzAwODIzLCJleHAiOjE1MDY5MDA4MjN9.YdrRKPf_9QIL42ikEFvOXtWN1n_rdXzCh34bDpD1hIM\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNDk5NzAwODIzLCJleHAiOjE1MDY5MDA4MjN9.YdrRKPf_9QIL42ikEFvOXtWN1n_rdXzCh34bDpD1hIM",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/friend",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
+			"data": null,
+			"dataMode": "params",
+			"name": "Friend list",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1499702532726,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
