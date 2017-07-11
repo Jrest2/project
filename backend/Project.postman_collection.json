@@ -24,53 +24,57 @@
 			],
 			"url": "http://localhost:8080/login",
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "POST",
-			"collectionId": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
 			"data": [],
 			"dataMode": "raw",
-			"name": "Login",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1499702518966,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"rawModeData": "{\n  \"email\":\"user@gmail.com\",\n  \"password\": \"password\"\n}"
+			"time": 1499764651789,
+			"name": "Login",
+			"description": "",
+			"collectionId": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
+			"responses": [],
+			"rawModeData": "{\n  \"email\":\"user20@gmail.com\",\n  \"password\": \"password\"\n}"
 		},
 		{
 			"id": "8a027683-b6f0-3e19-ec37-79300b70bdbd",
-			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNDk5NzAwODIzLCJleHAiOjE1MDY5MDA4MjN9.YdrRKPf_9QIL42ikEFvOXtWN1n_rdXzCh34bDpD1hIM\n",
+			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTQ5OTc2NDM3MCwiZXhwIjoxNTA2OTY0MzcwfQ.zwm_PtBL5V41YVll2CQ3KjWGxwzOxd-UxkPI8-9Xz7E\n",
 			"headerData": [
 				{
 					"key": "token",
-					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNDk5NzAwODIzLCJleHAiOjE1MDY5MDA4MjN9.YdrRKPf_9QIL42ikEFvOXtWN1n_rdXzCh34bDpD1hIM",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTQ5OTc2NDM3MCwiZXhwIjoxNTA2OTY0MzcwfQ.zwm_PtBL5V41YVll2CQ3KjWGxwzOxd-UxkPI8-9Xz7E",
 					"description": "",
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:8080/friend",
-			"queryParams": [],
+			"url": "http://localhost:8080/friend?name=",
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
 			"data": null,
 			"dataMode": "params",
-			"name": "Friend list",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1499702532726,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1499764652925,
+			"name": "Friend list",
+			"description": "",
+			"collectionId": "a54b8583-37c5-aebf-d74e-0cf1b0f00784",
+			"responses": []
 		}
 	]
 }
