@@ -1,144 +1,203 @@
 [
   {
     "id": 1,
-    "email": "user@gmail.com",
+    "email": "user1@gmail.com",
     "password": "password",
     "name": "Name_1",
     "lastName": "LastName_1",
-    "gender": "male"
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 2,
-    "email": "user1@gmail.com",
+    "email": "user2@gmail.com",
     "password": "password",
     "name": "Name_2",
-    "lastName": "LastName_2"
+    "lastName": "LastName_2",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 3,
-    "email": "user@gmail.com",
+    "email": "user3@gmail.com",
     "password": "password",
     "name": "Name_3",
-    "lastName": "LastName_3"
+    "lastName": "LastName_3",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 4,
-    "email": "user@gmail.com",
+    "email": "user4@gmail.com",
     "password": "password",
     "name": "Name_4",
-    "lastName": "LastName_4"
+    "lastName": "LastName_4",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 5,
-    "email": "user@gmail.com",
+    "email": "user5@gmail.com",
     "password": "password",
     "name": "Name_5",
-    "lastName": "LastName_5"
+    "lastName": "LastName_5",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 6,
-    "email": "user@gmail.com",
+    "email": "user6@gmail.com",
     "password": "password",
     "name": "Name_6",
-    "lastName": "LastName_6"
+    "lastName": "LastName_6",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 7,
-    "email": "user@gmail.com",
+    "email": "user7@gmail.com",
     "password": "password",
     "name": "Name_7",
-    "lastName": "LastName_7"
+    "lastName": "LastName_7",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 8,
-    "email": "user@gmail.com",
+    "email": "user8@gmail.com",
     "password": "password",
     "name": "Name_8",
-    "lastName": "LastName_8"
+    "lastName": "LastName_8",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 9,
-    "email": "user@gmail.com",
+    "email": "user9@gmail.com",
     "password": "password",
     "name": "Name_9",
-    "lastName": "LastName_9"
+    "lastName": "LastName_9",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 10,
-    "email": "user@gmail.com",
+    "email": "user10@gmail.com",
     "password": "password",
     "name": "Name_10",
-    "lastName": "LastName_10"
+    "lastName": "LastName_10",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 11,
-    "email": "user@gmail.com",
+    "email": "user11@gmail.com",
     "password": "password",
     "name": "Name_11",
-    "lastName": "LastName_11"
+    "lastName": "LastName_11",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 12,
-    "email": "user@gmail.com",
+    "email": "user12@gmail.com",
     "password": "password",
     "name": "Name_12",
-    "lastName": "LastName_12"
+    "lastName": "LastName_12",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 13,
-    "email": "user@gmail.com",
+    "email": "user13@gmail.com",
     "password": "password",
     "name": "Name_13",
-    "lastName": "LastName_13"
+    "lastName": "LastName_13",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 14,
-    "email": "user@gmail.com",
+    "email": "user14@gmail.com",
     "password": "password",
     "name": "Name_14",
-    "lastName": "LastName_14"
+    "lastName": "LastName_14",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 15,
-    "email": "user@gmail.com",
+    "email": "user15@gmail.com",
     "password": "password",
     "name": "Name_15",
-    "lastName": "LastName_15"
+    "lastName": "LastName_15",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 16,
-    "email": "user@gmail.com",
+    "email": "user16@gmail.com",
     "password": "password",
     "name": "Name_16",
-    "lastName": "LastName_16"
+    "lastName": "LastName_16",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
    {
     "id": 17,
-    "email": "user@gmail.com",
+    "email": "user17@gmail.com",
     "password": "password",
     "name": "Name_17",
-    "lastName": "LastName_17"
+    "lastName": "LastName_17",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 18,
-    "email": "user@gmail.com",
+    "email": "user18@gmail.com",
     "password": "password",
     "name": "Name_18",
-    "lastName": "LastName_18"
+    "lastName": "LastName_18",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 19,
-    "email": "user@gmail.com",
+    "email": "user19@gmail.com",
     "password": "password",
     "name": "Name_19",
-    "lastName": "LastName_19"
+    "lastName": "LastName_19",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   },
   {
     "id": 20,
-    "email": "user@gmail.com",
+    "email": "user20@gmail.com",
     "password": "password",
     "name": "Name_20",
-    "lastName": "LastName_20"
+    "lastName": "LastName_20",
+    "age": 25,
+    "gender": "male",
+    "dateOfBirth": "23.10.1996"
   }
 
 ]
