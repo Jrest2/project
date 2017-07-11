@@ -1,11 +1,23 @@
 var express = require('express');
 var _ = require('lodash');
+var jwt = require('jsonwebtoken');
 
 var config = require("../config");
 var users = require("../data/users");
 var friends = require("../data/friends");
 
 var router = express.Router();
+
+router.use('/*', (req, res, next) => {
+    try {
+        jwt.verify(req.headers.token, config.secretKey);
+        req.user = jwt.decode(req.headers.token);
+        next();
+    }
+    catch (e) {
+        res.status(401).json({message: "You are not permitted to do it"});
+    }
+});
 
 router.get('', (req, res, next) => {
     var foundFriends = _.filter(friends, (friend) =>{
@@ -17,6 +29,7 @@ router.get('', (req, res, next) => {
     foundFriends = _.map(foundFriends, (friend) => {
         var friendId = friend.user_1 === req.user.id ? friend.user_2 : friend.user_1;
         var user = _.find(users, (user) => user.id === friendId);
+
         if(user) {
             return {
                 id: user.id,
