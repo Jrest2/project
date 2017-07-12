@@ -1,6 +1,4 @@
 const express = require('express');
-const _ = require('lodash');
-const jwt = require('jsonwebtoken');
 
 const config = require("../config");
 const users = require("../data/users");
@@ -13,15 +11,15 @@ const router = express.Router();
  * Get friends list
  */
 router.get('', (req, res) => {
-    var foundFriends = _.filter(friends, (friend) =>{
+    let foundFriends = friends.filter(friend => {
         if(friend.firstUser === req.user.id || friend.secondUser === req.user.id) {
             return true;
         }
     });
 
-    foundFriends = _.map(foundFriends, (friend) => {
-        var friendId = friend.firstUser === req.user.id ? friend.secondUser : friend.firstUser;
-        var user = _.find(users, (user) => user.id === friendId);
+    foundFriends = foundFriends.map(friend => {
+        let friendId = friend.firstUser === req.user.id ? friend.secondUser : friend.firstUser;
+        let user = users.find(user => user.id === friendId);
 
         if(user) {
             return {
@@ -35,9 +33,10 @@ router.get('', (req, res) => {
         }
     });
 
-    foundFriends = _.filter(foundFriends, (friend) => {
+    foundFriends = foundFriends.filter(friend => {
         return req.query.name && friend.name !== req.query.name ? false : true;
     });
+
 
     res.json({friends: foundFriends})
 });
