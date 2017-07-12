@@ -10,31 +10,17 @@ const friends = require("../data/friends");
 const router = express.Router();
 
 /**
- * Verifying auth
- */
-router.use('/*', (req, res, next) => {
-    try {
-        jwt.verify(req.headers.token, config.secretKey);
-        req.user = jwt.decode(req.headers.token);
-        next();
-    }
-    catch (e) {
-        res.status(401).json({message: "You are not permitted to do it"});
-    }
-});
-
-/**
  * Get friends list
  */
-router.get('', (req, res, next) => {
+router.get('', (req, res) => {
     var foundFriends = _.filter(friends, (friend) =>{
-        if(friend.user_1 === req.user.id || friend.user_2 === req.user.id) {
+        if(friend.firstUser === req.user.id || friend.secondUser === req.user.id) {
             return true;
         }
     });
 
     foundFriends = _.map(foundFriends, (friend) => {
-        var friendId = friend.user_1 === req.user.id ? friend.user_2 : friend.user_1;
+        var friendId = friend.firstUser === req.user.id ? friend.secondUser : friend.firstUser;
         var user = _.find(users, (user) => user.id === friendId);
 
         if(user) {
@@ -50,8 +36,7 @@ router.get('', (req, res, next) => {
     });
 
     foundFriends = _.filter(foundFriends, (friend) => {
-        if (req.query.name && friend.name !== req.query.name) return false;
-        return true;
+        return req.query.name && friend.name !== req.query.name ? false : true;
     });
 
     res.json({friends: foundFriends})
