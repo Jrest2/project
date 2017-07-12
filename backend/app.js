@@ -1,16 +1,16 @@
-var express = require('express');
-var expressValidator = require('express-validator');
-var cors = require('cors')
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const expressValidator = require('express-validator');
+const cors = require('cors')
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var friendRouter = require('./routes/friend-router');
+const index = require('./routes/index');
+const friendRouter = require('./routes/friend-router');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

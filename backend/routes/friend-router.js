@@ -1,13 +1,17 @@
-var express = require('express');
-var _ = require('lodash');
-var jwt = require('jsonwebtoken');
+const express = require('express');
+const _ = require('lodash');
+const jwt = require('jsonwebtoken');
 
-var config = require("../config");
-var users = require("../data/users");
-var friends = require("../data/friends");
+const config = require("../config");
+const users = require("../data/users");
+const friends = require("../data/friends");
 
-var router = express.Router();
 
+const router = express.Router();
+
+/**
+ * Verifying auth
+ */
 router.use('/*', (req, res, next) => {
     try {
         jwt.verify(req.headers.token, config.secretKey);
@@ -19,6 +23,9 @@ router.use('/*', (req, res, next) => {
     }
 });
 
+/**
+ * Get friends list
+ */
 router.get('', (req, res, next) => {
     var foundFriends = _.filter(friends, (friend) =>{
         if(friend.user_1 === req.user.id || friend.user_2 === req.user.id) {
