@@ -1,6 +1,10 @@
+import './login.css';
+
 import React, { Component } from 'react';
-import apiService from '../../service/api.service'
-import './login.component.css';
+import { connect } from 'react-redux';
+import {login} from '../../actions/auth'
+import _ from 'lodash';
+
 
 class Login extends Component {
 
@@ -12,10 +16,11 @@ class Login extends Component {
         };
     }
 
-    handleChange(event) {
-        const events = event.target;
-        const name = events.name;
-        this.setState({ [name]: events.value });
+    componentDidUpdate() {
+        if(this.props.tokenData) {
+            localStorage.setItem('token', this.props.tokenData.token);
+            window.location.pathname = '/friends';
+        }
     }
 
     render() {
@@ -40,22 +45,34 @@ class Login extends Component {
         );
     }
 
+    handleChange(event) {
+        const events = event.target;
+        const name = events.name;
+        this.setState({ [name]: events.value });
+    }
+
     handleSubmit(event) {
         event.preventDefault();
     }
 
-    loginUser(){
-        let data = {
-            email: this.state.user,
-            password: this.state.pass
-        };
-        apiService.login(data, (token)=>{
-            console.log(token);
-            localStorage.setItem('token', token);
-            window.location.pathname = '/friends'
-        });
+    loginUser() {
+        console.log('login');
+        this.props.doLogin({email: this.state.user, password: this.state.pass});
 
     }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        tokenData: _.get(state, 'auth.login.data', ''),
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        doLogin: (payload) => dispatch(login(payload)),
+    };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
