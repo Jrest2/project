@@ -1,15 +1,16 @@
-var express = require('express');
-var jwt = require('jsonwebtoken');
-var _ = require('lodash');
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const _ = require('lodash');
 
-var config = require("../config");
-var users = require("../data/users");
-var friends = require("../data/friends");
+const config = require("../config");
+const users = require("../data/users");
+const friends = require("../data/friends");
 
-var router = express.Router();
+const router = express.Router();
 
-
-
+/**
+ * Login
+ */
 router.post('/login', (req, res, next) => {
 
     req.checkBody('email', 'Email is required').notEmpty();
@@ -18,19 +19,20 @@ router.post('/login', (req, res, next) => {
     var errors = req.validationErrors();
     if (errors) return res.status(400).json(errors);
 
-    var my = _.find(users, (user) => user.email === req.body.email);
-
     var user = _.find(users, (user) =>
         user.email === req.body.email && user.password === req.body.password);
 
     if (!user) return res.status(404).json({message: "Entered login or password is incorrect"});
 
-
+    var my = _.find(users, (user) => user.email === req.body.email);
     var token = jwt.sign({id: my.id}, config.secretKey, {expiresIn: 7200000});
 
     res.json({token: token})
 });
 
+/**
+ * Verifying auth
+ */
 router.use('/*', (req, res, next) => {
     try {
         jwt.verify(req.headers.token, config.secretKey);
